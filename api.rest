@@ -1,0 +1,6 @@
+:content = application/json
+POST http://localhost:8083/connectors/
+Accept: :content
+Content-Type: :content
+
+< register-mysql.json
