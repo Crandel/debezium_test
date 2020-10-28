@@ -26,7 +26,7 @@ services:
      - MYSQL_PASSWORD=mysqlpw
 
   connect:
-    image: debezium/connect:${DEBEZIUM_VERSION}
+    image: debezium/connect:0.9.3.Final
     ports:
      - 8083:8083
     links:

@@ -12,6 +12,6 @@
         "database.whitelist": "inventory",
         "database.history.kafka.bootstrap.servers": "kafka:9092",
         "database.history.kafka.topic": "schema-changes.inventory",
-        "table.exclude.list": "inventory.products_on_hand"
+        "table.blacklist": "inventory.products_on_hand"
     }
 }
