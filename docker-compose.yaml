@@ -24,6 +24,8 @@ services:
      - MYSQL_ROOT_PASSWORD=debezium
      - MYSQL_USER=mysqluser
      - MYSQL_PASSWORD=mysqlpw
+     - GTID_MODE=ON
+     - ENFORCE_GTID_CONSISTENCY=ON
 
   connect:
     image: debezium/connect:0.9.3.Final
@@ -37,6 +39,6 @@ services:
      - GROUP_ID=1
      - CONFIG_STORAGE_TOPIC=my_connect_configs
      - SNAPSHOT_LOCK_MODE=minimal
-     - SNAPSHOT_MODE=initial
+     - SNAPSHOT_MODE=when_needed
      - OFFSET_STORAGE_TOPIC=my_connect_offsets
      - STATUS_STORAGE_TOPIC=my_connect_statuses
